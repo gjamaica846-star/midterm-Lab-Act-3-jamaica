@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT SEMINAR 2026 - Student Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+<main class="container">
+    <header class="form-header">
+        <h1>IT SEMINAR 2026</h1>
+        <p>Student Registration Form</p>
+        <p>Enter your student information below.</p>
+    </header>
+
+    <section class="datetime-box">
+        <p>Date: <span id="currentDate"></span></p>
+        <p>Time: <span id="currentTime"></span></p>
+    </section>
+
+    <form id="registrationForm" novalidate>
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName"
+                required aria-describedby="fullNameError">
+            <small id="fullNameError" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="studentNumber">Student Number</label>
+            <input type="text" id="studentNumber" name="studentNumber"
+                placeholder="24-1234-123" required
+                aria-describedby="studentNumberError">
+            <small id="studentNumberError" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required
+                aria-describedby="emailError">
+            <small id="emailError" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber"
+                placeholder="09XXXXXXXXX or +639XXXXXXXXX" required
+                aria-describedby="mobileNumberError">
+            <small id="mobileNumberError" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                required aria-describedby="passwordError passwordFeedback">
+            <small id="passwordError" class="error"></small>
+            <small id="passwordFeedback" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword"
+                name="confirmPassword" required
+                aria-describedby="confirmPasswordError">
+            <small id="confirmPasswordError" class="error"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course" name="course" required
+                aria-describedby="courseError">
+                <option value="">Select your course</option>
+                <option value="BSIT">BSIT</option>
+                <option value="BSCS">BSCS</option>
+            </select>
+            <small id="courseError" class="error"></small>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required
+                aria-describedby="termsError">
+            <label for="terms">I agree to the Terms and Conditions.</label>
+        </div>
+        <small id="termsError" class="error"></small>
+
+        <button type="submit" id="registerBtn">Register</button>
+        <button type="reset" id="resetBtn" class="reset-btn">Reset</button>
+    </form>
+
+    <p id="successMessage" class="success" role="status"
+        aria-live="polite" hidden></p>
+
+    <section id="registrationSummary" hidden>
+        <h2>Registration Summary</h2>
+        <p>Full Name: <span id="summaryName"></span></p>
+        <p>Student Number: <span id="summaryStudentNumber"></span></p>
+        <p>Email: <span id="summaryEmail"></span></p>
+        <p>Mobile Number: <span id="summaryMobileNumber"></span></p>
+        <p>Course: <span id="summaryCourse"></span></p>
+    </section>
+
+    <footer>
+        <p>IT SEMINAR 2026 | Student Registration</p>
+    </footer>
+</main>
+</body>
+</html>

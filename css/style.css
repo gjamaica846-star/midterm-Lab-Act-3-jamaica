@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ADD8E6, #E6E6FA);
+    color: #243047;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-header h1 {
+    color: #5541A8;
+}
+
+.datetime-box {
+    padding: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    background: #E6F4FF;
+    border: 1px solid #ADD8E6;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.datetime-box p {
+    margin: 5px 0;
+}
+
+#currentDate {
+    color: #6554C0;
+}
+
+#currentTime {
+    color: #D4A000;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label,
+.form-group input,
+.form-group select {
+    display: block;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #C9D8E8;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #F8FBFF;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+    outline: 2px solid #4682B4;
+    outline-offset: 2px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 5px;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+}
+
+.error {
+    display: block;
+    color: #B42318;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+#passwordFeedback {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #5541A8;
+}
+
+[aria-invalid="true"] {
+    border-color: #B42318 !important;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    background: #6554C0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #483699;
+}
+
+.reset-btn {
+    background: #E8B923;
+    color: #243047;
+}
+
+.reset-btn:hover {
+    background: #D4A017;
+}
+
+.success {
+    padding: 12px;
+    color: #176534;
+    background: #E8F8ED;
+    border: 1px solid #A7DFB5;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#registrationSummary {
+    margin-top: 20px;
+    padding: 18px;
+    overflow-wrap: anywhere;
+    background: #F3F0FF;
+    border-radius: 10px;
+}
+
+#registrationSummary h2 {
+    color: #5541A8;
+}
+
+#registrationSummary p {
+    margin: 8px 0;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    color: #68758A;
+    font-size: 13px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+    }
+}
